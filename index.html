@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main
+        {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-image: url(./bg-imggg.webp);
+            background-repeat: no-repeat;
+            background-size: cover;
+           
+            
+        }
+        #box
+        {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            /* height: 50vh; */
+            width: 30vw;
+            font-size: 22px;
+            background-color: greenyellow;
+            text-align: center;
+            padding: 20px;
+            border-radius: 30px;
+            /* margin-right: 160px; */
+
+        }
+         @media screen and (min-width:320px) and (max-width:767px) {
+            #box
+            {
+                width: unset;
+            }
+            
+         }
+
+        #showdate
+        {
+            font-size: 20px;
+            padding: 6px 12px;
+            border-radius: 10px;
+            background-color: orangered;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <div id="box">
+            <h1 id="head">Show Me Todays Date</h1>
+            <button id="showdate">Show</button>
+        </div>
+       
+    </div>
+
+    <script>
+        var tar=document.getElementById('showdate');
+        tar.addEventListener("click",()=>
+    {
+        var data=document.getElementById('head')
+        data.innerHTML=Date()
+    })
+    </script>
+</body>
+</html>
